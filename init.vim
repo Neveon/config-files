@@ -5,12 +5,16 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'deoplete-plugins/deoplete-clang'
 Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'dense-analysis/ale'
-Plug 'sbdchd/neoformat'
+Plug 'sbdchd/neoformat'                     " Fix C/C++ formatting
 Plug 'preservim/nerdtree'                   " NerdTree
 Plug 'vim-airline/vim-airline'              " Status bar
 Plug 'preservim/tagbar'                     " Tagbar for code navigation
 Plug 'sainnhe/sonokai'                      " Color Scheme
-Plug 'jiangmiao/auto-pairs'               " Auto-close braces and scopes
+Plug 'jiangmiao/auto-pairs'                 " Auto-close braces and scopes
+Plug 'terryma/vim-multiple-cursors'         " highlight then CTRL + N for multiple cursors
+Plug 'tpope/vim-surround'                   " Surrounding ysw)
+Plug 'tpope/vim-commentary'                 " For Commenting gcc & gc
+Plug 'tc50cal/vim-terminal'                 " Vim Terminal :TerminalSplit
 
 call plug#end()
 
@@ -92,7 +96,12 @@ let g:neoformat_enabled_c = ['clangformat']
 
 
 "                       ********* REMAPS **********
-nmap <F8> :TagbarToggle<CR>     " For Tagbar Plug
+" For Tagbar Plug
+nmap <F8> :TagbarToggle<CR>
+
+" Vim Terminal
+" Terminal Split Horizontally bash
+nmap <F7> :TerminalSplit bash<CR>
 
 " instead of constantly writing :Neoformat
 nnoremap <leader>f :Neoformat<CR>
