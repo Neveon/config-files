@@ -15,3 +15,8 @@ alias edbrc="nvim ~/.bashrc"
 
 # tmux
 alias edtm="nvim ~/.tmux.conf"
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
